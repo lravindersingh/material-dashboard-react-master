@@ -29,7 +29,6 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Icon from "@material-ui/core/Icon";
 // core components
-import AdminNavbarLinks from "components/Navbars/AdminNavbarLinks.jsx";
 
 import sidebarStyle from "assets/jss/material-dashboard-react/components/sidebarStyle.jsx";
 
@@ -83,31 +82,6 @@ const Sidebar = ({ ...props }) => {
   );
   return (
     <div>
-      <Hidden mdUp implementation="css">
-        <Drawer
-          variant="temporary"
-          anchor={"right"}
-          open={props.open}
-          classes={{
-            paper: classNames(classes.drawerPaper)
-          }}
-          onClose={props.handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true // Better open performance on mobile.
-          }}
-        >
-          <div className={classes.sidebarWrapper}>
-            {<AdminNavbarLinks />}
-            {links}
-          </div>
-          {image !== undefined ? (
-            <div
-              className={classes.background}
-              style={{ backgroundImage: "url(" + image + ")" }}
-            />
-          ) : null}
-        </Drawer>
-      </Hidden>
       <Hidden smDown implementation="css">
         <Drawer
           anchor={"right"}

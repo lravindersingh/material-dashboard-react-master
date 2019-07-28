@@ -27,7 +27,6 @@ import Hidden from "@material-ui/core/Hidden";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
-import AdminNavbarLinks from "./AdminNavbarLinks.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 
 import headerStyle from "assets/jss/material-dashboard-react/components/headerStyle.jsx";
@@ -57,7 +56,6 @@ function Header({ ...props }) {
           </Button>
         </div>
         <Hidden smDown implementation="css">
-          {<AdminNavbarLinks />}
         </Hidden>
         <Hidden mdUp implementation="css">
           <IconButton
